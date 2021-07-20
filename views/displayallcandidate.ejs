@@ -1,0 +1,66 @@
+
+
+
+<style type="text/css">
+    .root{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-color: #fff;
+        height:auto;
+    }
+    .subdiv{
+        width:900px;
+        height:auto;
+       margin-top:20px;
+       background-color: #fff;
+       padding:10px;
+       border-radius:10px;
+       border:1px solid #34495e;
+    } 
+  </style>
+  <html>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+      <body>
+        <div class="root">
+        <div class="subdiv">
+          <b>List of Candidate</b><br><br>
+
+          <table class="table">
+           
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">candidate</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Round1</th>
+                  <th scope="col">Round2</th>
+                  <th scope="col">Round3</th>
+                  <th scope="col">Total</th>
+                  <th scope="col">Average</th>
+                </tr>
+              </thead>  
+              <tbody>
+                <% data.map(function(item,index) { %>
+               
+                    <tr>
+                      <th scope="row"><%=item.sno %></th>
+                      <td><%=item.cname %><br></td>
+                      <td><%=item.cemail %><br></td>
+                      <td><%=item.round1 %></td>
+                      <td><%=item.round2 %><br></td>
+                      <td><%=item.round3 %><br></td>
+                      <td><%=item.max %></td>
+                      <td><%=item.avg %></td>
+                    </tr> 
+            
+            <% }) %>
+          
+              
+  </tbody>
+  </table>
+  </div>
+  </div>
+  </html>
